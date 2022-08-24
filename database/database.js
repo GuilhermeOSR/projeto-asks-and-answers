@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 
 const connection = new Sequelize('bancoperguntas', 'root', 'root', {
-    host: process.env.PORT || 3000,
+    host: localhost,
     dialect: "mysql"
 })
 
