@@ -108,9 +108,9 @@ app.post('/salvarResposta', (req, res) => {
 
 
 
-const PORT = process.env.PORT || 9191;
+
 //Servidor
-app.listen(PORT, function() {
+app.listen(process.env.PORT || 3000, function() {
     console.log("servidor rodando");
 })
 
