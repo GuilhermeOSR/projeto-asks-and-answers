@@ -1,0 +1,44 @@
+<%- include("../partials/htm.ejs") -%>
+
+<%- include("../partials/nav.ejs") -%>
+
+<div class="container">
+    <a href="/" class="btn btn-primary float-end btnmyst">Voltar</a>
+    
+    <div class="card container espa">
+        <h2 class="h1 py-3 text-center"><%= ask.titulo %></h2>
+        <p class="text-center"><%= ask.descricao %> </p>
+        <form method="POST" action="/salvarResposta" class="form">
+            <label for="descricao "></label>
+
+            <textarea name="resposta" id="resp" cols="60" rows="4" placeholder="Digite sua Resposta" required class="form-control"></textarea>
+            <button type="submit" class="btn btn-primary float-end btnmyst w-100" >Enviar Resposta</button>
+            <input  type="hidden" name="perguntaId" value="<%= ask.id %>" >
+
+        </form>
+        
+</div>
+
+        <hr>
+
+        <h3>Respostas</h3>
+        <hr>
+        <% answers.forEach((answer) => {%>
+            <br>
+            <div class="card">
+                <div class="card-body">
+                    <p><%= answer.resposta %></p>
+                </div>
+            </div>
+
+        <% }) %>
+
+
+
+
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AskGui</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/estilo.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="main">
+        <header class="topo">
+           <a href=""><img class="imglogo" src="/imgs/wat.png" width="100px" alt=""></a>
+        </header>
+
+        <div class="container">
+
+            <a href="/ask" class="btn btn-primary float-end btnmyst">Perguntar</a>
+            <% asks.forEach(ask => { %>
+
+            <div class="card container espa">
+                <h2 class="flex texth2 py-3 "><%= ask.titulo %></h2>
+                <span class="flex text-end "><!--Data: IREI IMPLEMENTAR AINDA--></span>
+             
+                <a href="/answer/<%= ask.id %>" class="btn btn-primary float-end btnmyst">Responder</a>
+            </div>
+            <% }) %>
+
+        </div>
+   
+       
+    </div>
+    
+
+</body>
+</html>
